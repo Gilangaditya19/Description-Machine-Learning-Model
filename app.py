@@ -78,9 +78,9 @@ def predict_learning_style():
                 "text": text,
                 "learning_style": label,
                 "probabilities": {
-                    "Visual": float(pred[0]),
-                    "Auditory": float(pred[1]),
-                    "Kinesthetic": float(pred[2])
+                    "Auditory": float(pred[0]),
+                    "Kinesthetic": float(pred[1]),
+                    "Visual": float(pred[2])
                 }
             })
 
