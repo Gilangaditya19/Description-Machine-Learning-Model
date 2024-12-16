@@ -5,6 +5,7 @@ import nltk
 import pickle
 import tensorflow as tf
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from sklearn.preprocessing import LabelEncoder
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -15,6 +16,7 @@ nltk.download('punkt_tab')
 nltk.download('stopwords')
 
 app = Flask(__name__)
+CORS(app)
 
 model = tf.keras.models.load_model('model_learning_style.h5')
 
